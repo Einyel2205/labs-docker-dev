@@ -25,7 +25,7 @@ docker.io/library/python:3.9
 # docker run -it ubuntu bash 
 root@217a83fae32b:/# 
 
-## docker run -d -p 8080:80 httpd
+# docker run -d -p 8080:80 httpd
 Unable to find image 'httpd:latest' locally
 latest: Pulling from library/httpd
 efc2b5ad9eec: Already exists 
@@ -38,3 +38,10 @@ Digest: sha256:932ac36fabe1d2103ed3edbe66224ed2afe0041b317bcdb6f5d9be63594f0030
 Status: Downloaded newer image for httpd:latest
 16d7939d022282e17124461c1ceb2b48d70c0dad1e4cc497e142688069b14cab
 
+* Ejercicio 3
+# docker rm 217a83fae32b
+217a83fae32b
+# docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Total reclaimed space: 0B
