@@ -1,5 +1,6 @@
-# Ejercicio 1
-## Docker pull ubuntu
+# Laboratorio 1
+### Ejercicio 1
+#### Docker pull ubuntu
 * Using default tag: latest 
 * latest: Pulling from library/ubuntu
 * 9c704ecd0c69: Pull complete 
@@ -7,7 +8,7 @@
 * Status: Downloaded newer image for ubuntu:latest
 * docker.io/library/ubuntu:latest 
 
-## docker pull python:3.9
+#### docker pull python:3.9
 * 3.9: Pulling from library/python
 * ca4e5d672725: Pull complete 
 * 30b93c12a9c9: Pull complete 
@@ -21,11 +22,11 @@
 * Status: Downloaded newer image for python:3.9
 * docker.io/library/python:3.9
 
-# Ejericio 2
-## docker run -it ubuntu bash 
+### Ejericio 2
+#### docker run -it ubuntu bash 
 * root@217a83fae32b:/# 
 
-## docker run -d -p 8080:80 httpd
+#### docker run -d -p 8080:80 httpd
 * Unable to find image 'httpd:latest' locally
 * latest: Pulling from library/httpd
 * efc2b5ad9eec: Already exists 
@@ -38,10 +39,10 @@
 * Status: Downloaded newer image for httpd:latest
 * 16d7939d022282e17124461c1ceb2b48d70c0dad1e4cc497e142688069b14cab
 
-# Ejercicio 3
-## docker rm 217a83fae32b
+### Ejercicio 3
+#### docker rm 217a83fae32b
 * 217a83fae32b
-## docker container prune
+#### docker container prune
 * WARNING! This will remove all stopped containers.
 * Are you sure you want to continue? [y/N] y
 * Total reclaimed space: 0B
@@ -112,3 +113,22 @@
  => => writing image sha256:a7f7cd8be481bb875075d135e0d6ca0aa05ef4c596b35ca710514b93e384a69c                                       0.0s
  => => naming to docker.io/library/my-nginx:latest 
 
+## TEMA 2
+
+### Ejercicio 1
+#### docker build -t my-nginx:latest .
+* [+] Building 2.4s (7/7) FINISHED                                                                                                 docker:default
+ => [internal] load build definition from dockerfile                                                                                       0.1s
+ => => transferring dockerfile: 93B                                                                                                        0.0s
+ => [internal] load metadata for docker.io/library/nginx:latest                                                                            0.0s
+ => [internal] load .dockerignore                                                                                                          0.0s
+ => => transferring context: 2B                                                                                                            0.0s
+ => [internal] load build context                                                                                                          0.4s
+ => => transferring context: 244B                                                                                                          0.0s
+ => [1/2] FROM docker.io/library/nginx:latest                                                                                              0.8s
+ => [2/2] COPY index.html /usr/share/nginx/html/                                                                                           0.4s
+ => exporting to image                                                                                                                     0.7s
+ => => exporting layers                                                                                                                    0.6s
+ => => writing image sha256:1167fdaafa2d760943d650707896f927409f3458bc91dfaa705c9af844abf991                                               0.0s
+ => => naming to docker.io/library/my-nginx:latest  
+ 
