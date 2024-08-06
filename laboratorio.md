@@ -47,11 +47,11 @@
 * Total reclaimed space: 0B
 
 # Laboratorio 2
-## TEMA 1
 
-## Ejercicio 1
-### docker build -t ubuntu-updated:latest .
-[+] Building 9.2s (6/6)FINISHED                                                                                         docker:default
+## TEMA 1
+### Ejercicio 1
+#### docker build -t ubuntu-updated:latest .
+* [+] Building 9.2s (6/6)FINISHED                                                                                         docker:default
  => [internal] load build definition from dockerfile                                                                               0.2s
  => => transferring dockerfile: 97B                                                                                                0.0s
  => [internal] load metadata for docker.io/library/ubuntu:latest                                                                   0.0s
@@ -64,9 +64,9 @@
  => => writing image sha256:33ff0081d2a0cd6dd2ca830073799d64a9410779595f5280bddefdd3b57d897e                                       0.0s 
  => => naming to docker.io/library/ubuntu-updated:lates
 
-## Ejercicio 3
-### docker build -t ubuntu-updated:latest .
-[+] Building 13.3s (6/6) FINISHED                                                                                        docker:default
+### Ejercicio 3
+#### docker build -t ubuntu-updated:latest .
+* [+] Building 13.3s (6/6) FINISHED                                                                                        docker:default
  => [internal] load build definition from dockerfile                                                                               0.0s
  => => transferring dockerfile: 138B                                                                                               0.0s
  => [internal] load metadata for docker.io/library/ubuntu:latest                                                                   0.0s
@@ -79,8 +79,8 @@
  => => writing image sha256:ad3ac71160328144d55352bc299a5db4ef40b55a5f6e171626392c61c64aa282                                       0.0s 
  => => naming to docker.io/library/ubuntu-updated:latest 
 
-## Ejercicio 4 
-### docker build -t my-nginx:latest .
+### Ejercicio 4 
+#### docker build -t my-nginx:latest .
 * [+] Building 0.4s (6/6)                       FINISHED                                                                                         docker:default
  => [internal] load build definition from dockerfile                                                                               0.0s
  => => transferring dockerfile: 138B                                                                                               0.0s
@@ -94,5 +94,21 @@
  => => writing image sha256:ad3ac71160328144d55352bc299a5db4ef40b55a5f6e171626392c61c64aa282                                       0.0s
  => => naming to docker.io/library/my-nginx:latest   
 
-### docker run -d -p 80:80 my-nginx:latest
+#### docker run -d -p 80:80 my-nginx:latest
 * bcdb15b298aeba512f4da6e09f6622936ef3ff52f18478b827d3c3279ed30445
+
+### Ejercicio 5
+#### docker build -t my-nginx:latest .
+* [+] Building 0.6s (6/6) FINISHED                                                                                         docker:default
+ => [internal] load build definition from dockerfile                                                                               0.0s
+ => => transferring dockerfile: 148B                                                                                               0.0s
+ => [internal] load metadata for docker.io/library/ubuntu:latest                                                                   0.0s
+ => [internal] load .dockerignore                                                                                                  0.0s
+ => => transferring context: 2B                                                                                                    0.0s
+ => [1/2] FROM docker.io/library/ubuntu:latest                                                                                     0.0s
+ => CACHED [2/2] RUN apt-get update && apt-get install -y nginx                                                                    0.0s
+ => exporting to image                                                                                                             0.1s
+ => => exporting layers                                                                                                            0.0s
+ => => writing image sha256:a7f7cd8be481bb875075d135e0d6ca0aa05ef4c596b35ca710514b93e384a69c                                       0.0s
+ => => naming to docker.io/library/my-nginx:latest 
+
